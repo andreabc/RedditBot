@@ -30,6 +30,8 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = filter(None, posts_replied_to)
 
+keywords = "lmao"
+
 # Get the top 5 values from our subreddit
 subreddit = r.get_subreddit('pythonforengineers')
 for submission in subreddit.get_hot(limit=5):
@@ -41,7 +43,7 @@ for submission in subreddit.get_hot(limit=5):
         # Do a case insensitive search
         if re.search("i love python", submission.title, re.IGNORECASE):
             # Reply to the post
-            submission.add_comment("Nigerian scammer bot says: It's all about the Bass (and Python)")
+            submission.add_comment("Hello, I am a bot. It seems as though you are asking a frequently asked question. This link may help you: https://www.reddit.com/r/sandiego/comments/d9dlr/definitive_list/")
             print "Bot replying to : ", submission.title
 
             # Store the current id into our list
